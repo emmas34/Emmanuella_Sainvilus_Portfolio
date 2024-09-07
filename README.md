@@ -10,6 +10,6 @@ Program and School: Masters of Social Research and Data Analytics
 
 Personal email: emmanuellasainvilus@gmail.com
 
-## Descctiption
+## Description
 
 ## Table of Contents
