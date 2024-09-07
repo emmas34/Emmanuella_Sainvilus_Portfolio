@@ -1,0 +1,61 @@
+---
+title: "mmr_2017"
+author: "emmanuella_sainvilus"
+date: "2024-02-27"
+output: word_document
+---
+
+```{r}
+rm(list=ls())
+gc()
+
+directory <- "C:/Users/emma1/OneDrive/NYC_Open_Project"
+setwd(directory)
+
+
+set.seed(3032)
+
+library(readxl)
+library(ggplot2)
+```
+```{r}
+data <- read_xlsx("C:/Users/emma1/OneDrive/NYC_Open_Project/Pregnancy-Associated_Mortality_2017.xlsx")
+
+data <- data.frame(data)
+```
+
+```{r}
+summary(data$Deaths)
+```
+```{r}
+Race.ethnicity <- c(5, 21, 16, 3, 10, 1, 1, 6, 2, 10, 1)
+Race.ethnicity <- as.numeric(Race.ethnicity)
+summary(Race.ethnicity)
+```
+```{r}
+Borough <- c(9, 15, 5, 13, 8, 5, 6, 7, 4, 1, 0, 1)
+Borough <- as.numeric(Race.ethnicity)
+summary(Race.ethnicity)
+```
+
+```{r}
+ggplot(data, aes(x = Boroughs, y = Deaths)) +
+  geom_bar(stat = "identity", fill = "skyblue") + labs(title = "Maternal Mortality Rates by Borough In 2017")
+```
+```{r}
+ggplot(data, aes(x = Deaths, y = Underlying_cause)) +
+  geom_bar(stat = "identity", fill = "skyblue") + labs(title = "Underlying Causes In 2017")
+```
+
+```{r}
+ggplot(data, aes(x = Deaths, y = Race.ethnicity)) +
+  geom_bar(stat = "identity", fill = "skyblue") + labs(title = "Maternal Mortality Rates by Eace/Ethnicity Year 2017")
+```
+```{r}
+ggplot(data, aes(x = Deaths, y = Related)) +
+  geom_bar(stat = "identity", fill = "skyblue") + labs(title = "Maternal Mortality Rates by Borough Year 2017")
+```
+```{r}
+
+```
+
