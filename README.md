@@ -4,7 +4,7 @@
 
 Name: Emmanuella Sainivilus
 
-Expected Year of Graduation: May 2026
+Expected Year of Graduation: Spring 2026
 
 Program and School: Masters of Social Research and Data Analytics
 
